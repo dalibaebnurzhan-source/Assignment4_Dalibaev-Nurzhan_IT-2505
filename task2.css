@@ -1,0 +1,23 @@
+.max-width-600 {
+  max-width: 600px;
+}
+
+/* User-invalid CSS pseudo-class to show feedback only after user interaction */
+input:user-invalid, 
+select:user-invalid, 
+textarea:user-invalid {
+  border-color: #dc3545;
+}
+
+input:user-invalid ~ .invalid-feedback,
+select:user-invalid ~ .invalid-feedback,
+textarea:user-invalid ~ .invalid-feedback,
+input:user-invalid ~ div ~ .invalid-feedback {
+  display: block;
+}
+
+input:user-valid, 
+select:user-valid, 
+textarea:user-valid {
+  border-color: #198754;
+}

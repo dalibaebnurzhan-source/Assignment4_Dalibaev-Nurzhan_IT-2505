@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 1 - Book a train ticket</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="task1.css">
+</head>
+<body class="p-3 p-md-5">
+
+  <div class="booking-card mx-auto">
+    <div class="booking-header">
+      <h2 class="m-0 fw-bold fs-4">Book a train ticket</h2>
+    </div>
+
+    <form class="booking-body p-4">
+      <!-- Trip type (Radio buttons styled as toggle) -->
+      <div class="mb-4">
+        <div class="trip-toggle btn-group w-100" role="group" aria-label="Trip type">
+          <input type="radio" class="btn-check" name="tripType" id="oneWay" checked>
+          <label class="btn btn-trip" for="oneWay">One way</label>
+
+          <input type="radio" class="btn-check" name="tripType" id="roundTrip">
+          <label class="btn btn-trip" for="roundTrip">Round trip</label>
+        </div>
+      </div>
+
+      <!-- From & To -->
+      <div class="row g-3 mb-3">
+        <div class="col-12 col-md-6">
+          <label for="fromCity" class="form-label text-muted small mb-1">From</label>
+          <input type="text" class="form-control custom-input" id="fromCity" value="Astana" required>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="toCity" class="form-label text-muted small mb-1">To</label>
+          <input type="text" class="form-control custom-input" id="toCity" value="Almaty" required>
+        </div>
+      </div>
+
+      <!-- Dates & Passengers -->
+      <div class="row g-3 mb-3">
+        <div class="col-12 col-md-4">
+          <label for="departureDate" class="form-label fw-semibold small mb-1">Departure</label>
+          <input type="date" class="form-control custom-input" id="departureDate" required>
+        </div>
+        <div class="col-12 col-md-4">
+          <label for="returnDate" class="form-label fw-semibold small mb-1">Return</label>
+          <input type="date" class="form-control custom-input" id="returnDate">
+        </div>
+        <div class="col-12 col-md-4">
+          <label for="passengers" class="form-label fw-semibold small mb-1">Passengers</label>
+          <select class="form-select custom-input" id="passengers">
+            <option value="1" selected>1 adult</option>
+            <option value="2">2 adults</option>
+            <option value="3">3 adults</option>
+            <option value="4">4 adults</option>
+            <option value="5">5 adults</option>
+            <option value="6">6 adults</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Carriage class -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold small d-block mb-2">Carriage class</label>
+        <div class="d-flex gap-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="carriageClass" id="seat" value="seat" required>
+            <label class="form-check-label small" for="seat">Seat</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="carriageClass" id="coupe" value="coupe" checked required>
+            <label class="form-check-label small" for="coupe">Coupé</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="carriageClass" id="sleeper" value="sleeper" required>
+            <label class="form-check-label small" for="sleeper">Sleeper</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone & Email -->
+      <div class="row g-3 mb-3">
+        <div class="col-12 col-md-6">
+          <label for="phoneInput" class="form-label fw-semibold small mb-1">Phone</label>
+          <div class="input-group">
+            <span class="input-group-text custom-prefix">+7</span>
+            <input type="tel" class="form-control custom-input border-start-0" id="phoneInput" placeholder="701 234 56 78" required>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="emailInput" class="form-label fw-semibold small mb-1">Email</label>
+          <input type="email" class="form-control custom-input" id="emailInput" placeholder="name@example.com" required>
+        </div>
+      </div>
+
+      <!-- Checkboxes -->
+      <div class="mb-4">
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" id="smsTicket">
+          <label class="form-check-label text-secondary small" for="smsTicket">Also send the ticket by SMS</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="agreeRules" required>
+          <label class="form-check-label text-secondary small" for="agreeRules">I agree with the carriage rules</label>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="d-flex flex-column-reverse flex-md-row justify-content-end gap-3">
+        <button type="reset" class="btn btn-outline-custom rounded-pill px-4 py-2 fw-semibold">Clear</button>
+        <button type="submit" class="btn btn-primary-custom rounded-pill px-4 py-2 fw-semibold">Find trains</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f7f6;
+  color: #16302B;
+}
+
+.booking-card {
+  max-width: 720px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.booking-header {
+  background-color: #0F6B5F;
+  color: #ffffff;
+  padding: 24px 32px;
+}
+
+.custom-input {
+  background-color: #F4F7F5;
+  border: 1px solid #E6EFEC;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.custom-input:focus {
+  background-color: #ffffff;
+  border-color: #0F6B5F;
+  box-shadow: 0 0 0 0.2rem rgba(15, 107, 95, 0.25);
+}
+
+.custom-prefix {
+  background-color: #0F6B5F;
+  color: white;
+  border: 1px solid #0F6B5F;
+  border-radius: 10px 0 0 10px;
+  font-weight: 500;
+}
+
+.trip-toggle {
+  background-color: #ffffff;
+  border: 1px solid #0F6B5F;
+  border-radius: 30px;
+  padding: 3px;
+  max-width: 260px;
+}
+
+.btn-trip {
+  border-radius: 25px !important;
+  color: #0F6B5F;
+  border: none;
+  font-weight: 600;
+  padding: 8px 16px;
+}
+
+.btn-check:checked + .btn-trip {
+  background-color: #0F6B5F;
+  color: #ffffff;
+}
+
+.btn-primary-custom {
+  background-color: #F2A93B;
+  border-color: #F2A93B;
+  color: #ffffff;
+}
+
+.btn-primary-custom:hover {
+  background-color: #e0972a;
+  border-color: #e0972a;
+  color: #ffffff;
+}
+
+.btn-outline-custom {
+  border: 1px solid #16302B;
+  color: #16302B;
+  background-color: transparent;
+}
+
+.btn-outline-custom:hover {
+  background-color: #16302B;
+  color: #ffffff;
+}
+
+.form-check-input:checked {
+  background-color: #0F6B5F;
+  border-color: #0F6B5F;
+}
